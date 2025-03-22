@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="https://i.ibb.co/WNq1BnFy/Sem-T-tulo-2.png" type="image/x-icon">
+  <title>Soares DSN</title>
+  <style>
+    /* Estilo para o cabeçalho e logo */
+    header {
+      background-color: #333;
+      padding: 20px;
+      text-align: center;
+    }
+    header img {
+      width: 150px;
+    }
+
+    /* Estilo para o portfólio */
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 40px;
+  gap: 15px; /* Espaço entre as imagens */
+}
+
+.portfolio .image-container {
+  position: relative;
+  width: 100%;  
+  max-width: 350px;  /* Limita a largura máxima das imagens */
+  overflow: hidden;  /* Esconde o conteúdo que ultrapassar o limite da imagem */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio img {
+  width: 100%;  /* A imagem irá ocupar até 100% do tamanho do seu contêiner */
+  height: auto;  /* Mantém a proporção das imagens */
+  object-fit: cover;  /* As imagens se ajustam sem distorcer */
+  transition: transform 0.3s ease-in-out; /* Efeito suave ao passar o mouse */
+}
+
+/* Efeito de zoom ao passar o mouse */
+.portfolio img:hover {
+  transform: scale(1.1);  /* Aumenta a imagem em 10% */
+}
+
+/* Efeito de degradê escuro e título ao passar o mouse */
+.portfolio .image-container:hover::after {
+  content: '';  /* Criando o conteúdo para o pseudo-elemento */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40%;  /* Degradê cobrindo a parte inferior da imagem */
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)); /* Degradê escuro */
+  z-index: 1;  /* Coloca o escurecimento acima da imagem */
+}
+
+/* Efeito do título */
+.portfolio .image-container:hover .text-overlay {
+  opacity: 1;  /* Torna o título visível */
+  transform: translateY(0);  /* Traz o título para a posição correta */
+}
+
+/* Estilo do título sobre a imagem */
+.text-overlay {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);  /* Centraliza e esconde o título inicialmente */
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 2;
+  font-family: 'Arial', sans-serif; /* Definindo a fonte para Arial */
+}
+
+    /* Estilo para o botão flutuante de WhatsApp */
+    .whatsapp-button {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      background-color: #333;
+      color: white;
+      border: none;
+      border-radius: 50%;  /* Faz o botão circular */
+      width: 60px;          /* Tamanho do botão */
+      height: 60px;         /* Tamanho do botão */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+    }
+
+    /* Efeito de hover para o botão */
+    .whatsapp-button:hover {
+      background-color: #122f8c;
+    }
+
+    /* Estilo para a logo dentro do botão */
+    .whatsapp-button img {
+      width: 30px; /* Tamanho da logo dentro do botão */
+      height: 30px; /* Tamanho da logo dentro do botão */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Cabeçalho com logo -->
+  <header>
+    <img src="https://i.ibb.co/k6GNZ4Lr/logo.png" alt="Logo">
+  </header>
+
+   <!-- Portfólio de imagens -->
+   <section class="portfolio">
+    <div class="image-container">
+      <img src="https://i.ibb.co/HD2wScZv/BELLINGHAM.png" alt="Imagem 1">
+      <div class="text-overlay"></div>
+    </div>
+
+    <div class="image-container">
+      <img src="https://i.ibb.co/DPXHLLcJ/site.png" alt="Imagem 2">
+      <div class="text-overlay"></div>
+    </div>
+
+    <div class="image-container">
+      <img src="https://i.ibb.co/RkpCpXCn/PEDRI.png" alt="Imagem 3">
+      <div class="text-overlay"></div>
+    </div>
+  </section>
+
+  <!-- Botão flutuante de WhatsApp -->
+  <a href="https://wa.me/5583988542595" target="_blank">
+    <button class="whatsapp-button">
+      <img src="https://i.ibb.co/RGS1NQ5N/Sem-T-tulo-1.png" alt="WhatsApp">
+    </button>
+  </a>
+
+</body>
+</html>
